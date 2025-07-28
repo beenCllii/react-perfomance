@@ -1,13 +1,14 @@
+import React from 'react';
 
-const Messges1 = ({ input }) => {
+const Messges1 = React.memo(({ input }) => {
     return (
         <div>
             <p>Messages: {input}</p>
         </div>
     )
-}
+})
 
-const TitleList = ({ input }) => {
+const TitleList = React.memo(({ input }) => {
     return (
         <div>
             <ul>
@@ -19,28 +20,29 @@ const TitleList = ({ input }) => {
             </ul>
         </div>
     )
-}
+})
 
-const Title = ({ key, posts }) => {
+const Title = React.memo(({ key, posts }) => {
     return (
         <li key={key}>
             <p>{posts}</p>
         </li>
     )
 
-}
+})
+
+const TestC = (props) => {
 
 
-const TestB = (props) => {
 
 
     return (
         <div>
-            <h1>Test B components</h1>
+            <h1>Test C components</h1>
             <Messges1 input={props.messages} />
             <TitleList input={props.posts} />
         </div>
     )
 }
 
-export default TestB
+export default TestC

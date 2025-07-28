@@ -7,11 +7,11 @@ const TestA = (props) => {
       <p>Messages: {props.messages}</p>
       <ul>
         {props.posts.map(posts => {
-            return(
-                <li key={posts.id}>
-                    <p>{posts.title}</p>
-                </li>
-            )
+          return (
+            <li key={posts.id}>
+              <p>{posts.title}</p>
+            </li>
+          )
         })}
       </ul>
     </div>
